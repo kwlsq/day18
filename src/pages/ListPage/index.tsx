@@ -10,7 +10,7 @@ const ListPage: React.FC = () => {
     pokemonList,
     loading,
     error,
-    setOffsetPage,
+    // setOffsetPage,
     setSortByField,
     sortByField,
   } = usePokemonList();
@@ -29,7 +29,7 @@ const ListPage: React.FC = () => {
       document.documentElement.offsetHeight - 100 // Trigger when 100px from bottom
     ) {
       console.log("call api");
-      setOffsetPage(pokemonList.length + 10);
+      // setOffsetPage(pokemonList.length + 10);
     }
   };
 
