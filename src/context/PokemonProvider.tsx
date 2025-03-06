@@ -95,7 +95,7 @@ export const PokemonProvider: React.FC<{ children: JSX.Element }> = ({
     };
 
     fetchPokemonList();
-  }, [searchQuery, sortByField, setOffsetPage]);
+  }, [searchQuery, sortByField, offsetPage]);
 
   const value: PokemonContextType = {
     pokemonList,

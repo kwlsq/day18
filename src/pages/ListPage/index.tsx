@@ -6,8 +6,14 @@ import usePokemonList from "../../hooks/usePokemonList";
 
 const ListPage: React.FC = () => {
   const [singleDisplayed, setSingleDisplayed] = useState(false);
-  const { setSortByField, sortByField } = usePokemonList();
-  const { pokemonList, loading, error, setOffsetPage } = usePokemonList();
+  const {
+    pokemonList,
+    loading,
+    error,
+    setOffsetPage,
+    setSortByField,
+    sortByField,
+  } = usePokemonList();
 
   const handleDisplay = useCallback(() => {
     setSingleDisplayed(!singleDisplayed);
@@ -22,7 +28,7 @@ const ListPage: React.FC = () => {
       window.innerHeight + document.documentElement.scrollTop >=
       document.documentElement.offsetHeight - 100 // Trigger when 100px from bottom
     ) {
-      console.log('call api')
+      console.log("call api");
       setOffsetPage(pokemonList.length + 10);
     }
   };
